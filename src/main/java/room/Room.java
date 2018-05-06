@@ -1,6 +1,7 @@
 package room;
 
 import java.util.ArrayList;
+import guest.Guest;
 
 public abstract class Room {
 
