@@ -71,4 +71,9 @@ public class Hotel {
         Bedroom room = findRoom(roomChoice);
         room.addGuest(guest);
     }
+
+    public void checkOut(int roomChoice){
+        Bedroom room = findRoom(roomChoice);
+        room.checkOut();
+    }
 }

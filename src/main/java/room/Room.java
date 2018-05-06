@@ -51,4 +51,8 @@ public abstract class Room {
     public void addGuest(Guest guest){
         this.occupants.add(guest);
     }
+
+    public void checkOut(){
+        this.occupants.clear();
+    }
 }
