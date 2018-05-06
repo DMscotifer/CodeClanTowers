@@ -45,5 +45,11 @@ public class HotelTest {
     public void bedroomsArrayNotZero() {
         assertEquals(1, hotel1.getBedrooms().size());
     }
+
+    @Test
+    public void chooseARoom() {
+        Bedroom testRoom = hotel1.findRoom(1);
+        assertEquals(1, testRoom.getRoomNo());
+    }
 }
 
