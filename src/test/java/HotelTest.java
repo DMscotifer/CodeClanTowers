@@ -51,5 +51,11 @@ public class HotelTest {
         Bedroom testRoom = hotel1.findRoom(1);
         assertEquals(1, testRoom.getRoomNo());
     }
+
+    @Test
+    public void canCheckInGuest() {
+        hotel1.checkIn(guest1, 1);
+        assertEquals(1, hotel1.numberOfGuests());
+    }
 }
 

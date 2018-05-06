@@ -28,6 +28,10 @@ public abstract class Room {
         return occupants;
     }
 
+    public int numberOfOccupants(){
+        return occupants.size();
+    }
+
     public void setOccupants(ArrayList<Guest> occupants) {
         this.occupants = occupants;
     }
@@ -42,5 +46,9 @@ public abstract class Room {
 
     public ArrayList<Guest> putGuestInRoom(){
         return this.occupants;
+    }
+
+    public void addGuest(Guest guest){
+        this.occupants.add(guest);
     }
 }

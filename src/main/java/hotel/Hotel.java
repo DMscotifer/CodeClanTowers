@@ -44,6 +44,20 @@ public class Hotel {
         this.conferences = conferences;
     }
 
+    public int numberOfGuests(){
+        int total = 0;
+        for (Bedroom room : bedrooms){
+            total += room.numberOfOccupants();
+        }
+        for (Conference room : conferences){
+            total += room.numberOfOccupants();
+        }
+        for (DiningRoom room : diningRooms){
+            total += room.numberOfOccupants();
+        }
+        return total;
+    }
+
     public Bedroom findRoom(int roomChoice) {
         for (Bedroom room : bedrooms) {
             if (roomChoice == room.getRoomNo()) {
@@ -51,5 +65,10 @@ public class Hotel {
             }
         }
         return null;
+    }
+
+    public void checkIn(Guest guest, int roomChoice){
+        Bedroom room = findRoom(roomChoice);
+        room.addGuest(guest);
     }
 }

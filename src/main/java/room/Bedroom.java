@@ -36,4 +36,5 @@ public class Bedroom extends Room {
     public void setNightlyRate(double nightlyRate) {
         this.nightlyRate = nightlyRate;
     }
+
 }
