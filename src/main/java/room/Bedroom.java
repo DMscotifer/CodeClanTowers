@@ -1,17 +1,14 @@
-package hotel.bedroom;
-
-import hotel.Room;
+package room;
 
 public class Bedroom extends Room {
 
     private int roomNo;
     private BedroomType type;
-    private double rate;
 
-    public Bedroom(int roomNo, BedroomType type, double rate) {
+    public Bedroom(Integer rate, int roomNo, BedroomType type, double rate1) {
+        super(rate);
         this.roomNo = roomNo;
         this.type = type;
-        this.rate = rate;
     }
 
     public int getRoomNo() {
@@ -30,11 +27,4 @@ public class Bedroom extends Room {
         this.type = type;
     }
 
-    public double getRate() {
-        return rate;
-    }
-
-    public void setRate(double rate) {
-        this.rate = rate;
-    }
 }

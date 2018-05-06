@@ -1,8 +1,11 @@
-public class Guest {
+package room;
+
+public class HireRoom extends Room {
 
     private String name;
 
-    public Guest(String name) {
+    public HireRoom(int capacity, String name) {
+        super(capacity);
         this.name = name;
     }
 
@@ -13,5 +16,4 @@ public class Guest {
     public void setName(String name) {
         this.name = name;
     }
-
 }
