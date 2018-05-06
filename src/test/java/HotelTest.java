@@ -54,13 +54,13 @@ public class HotelTest {
 
     @Test
     public void canCheckInGuest() {
-        hotel1.checkIn(guest1, 1);
+        hotel1.checkIn(guest1, 1, 2);
         assertEquals(1, hotel1.numberOfGuests());
     }
 
     @Test
     public void canCheckOutGuest() {
-        hotel1.checkIn(guest1, 1);
+        hotel1.checkIn(guest1, 1, 2);
         hotel1.checkOut(1);
         assertEquals(0, hotel1.numberOfGuests());
     }
@@ -69,6 +69,13 @@ public class HotelTest {
     public void canListVacantRooms() {
         ArrayList<Bedroom> results = hotel1.listVacancies();
         assertEquals(1, results.size());
+    }
+
+    @Test
+    public void hasBookingLength() {
+        Bedroom bedroom1 = new Bedroom(1, true, 2, Type.SINGLE, 80.00);
+        bedroom1.setBookingLength(2);
+        assertEquals(2, bedroom1.getBookingLength());
     }
 }
 

@@ -67,7 +67,7 @@ public class Hotel {
         return null;
     }
 
-    public void checkIn(Guest guest, int roomChoice){
+    public void checkIn(Guest guest, int roomChoice, int numberOfNights){
         Bedroom room = findRoom(roomChoice);
         room.addGuest(guest);
     }

@@ -5,12 +5,14 @@ public class Bedroom extends Room {
     private int roomNo;
     private Type type;
     private double nightlyRate;
+    private int bookingLength;
 
     public Bedroom(int capacity, boolean chargeable, int roomNo, Type type, double nightlyRate) {
         super(capacity, chargeable);
         this.roomNo = roomNo;
         this.type = type;
         this.nightlyRate = nightlyRate;
+        this.bookingLength = 0;
     }
 
     public int getRoomNo() {
@@ -37,4 +39,11 @@ public class Bedroom extends Room {
         this.nightlyRate = nightlyRate;
     }
 
+    public int getBookingLength() {
+        return bookingLength;
+    }
+
+    public void setBookingLength(int bookingLength) {
+        this.bookingLength = bookingLength;
+    }
 }
