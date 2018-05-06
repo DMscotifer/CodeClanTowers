@@ -26,6 +26,6 @@ public class BedroomTest {
 
     @Test
     public void hasRate() {
-        assertEquals(80.00, bedroom1.getRate(), 0.01);
+        assertEquals(80.00, bedroom1.getNightlyRate(), 0.01);
     }
 }

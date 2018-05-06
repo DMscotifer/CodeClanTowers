@@ -1,3 +1,4 @@
+import org.junit.Test;
 import room.DiningRoom;
 import org.junit.Before;
 
@@ -9,7 +10,11 @@ public class DiningRoomTest {
 
     @Before
     public void before(){
-        diningRoom1 = new DiningRoom();
+        diningRoom1 = new DiningRoom(20, false);
     }
 
+    @Test
+    public void hasCapacity() {
+        assertEquals(20, diningRoom1.getCapacity());
+    }
 }

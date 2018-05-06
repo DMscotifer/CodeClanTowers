@@ -4,13 +4,13 @@ public class Bedroom extends Room {
 
     private int roomNo;
     private Type type;
-    private double rate;
+    private double nightlyRate;
 
-    public Bedroom(int capacity, boolean chargeable, int roomNo, Type type, double rate) {
+    public Bedroom(int capacity, boolean chargeable, int roomNo, Type type, double nightlyRate) {
         super(capacity, chargeable);
         this.roomNo = roomNo;
         this.type = type;
-        this.rate = rate;
+        this.nightlyRate = nightlyRate;
     }
 
     public int getRoomNo() {
@@ -29,11 +29,11 @@ public class Bedroom extends Room {
         this.type = type;
     }
 
-    public double getRate() {
-        return rate;
+    public double getNightlyRate() {
+        return nightlyRate;
     }
 
-    public void setRate(double rate) {
-        this.rate = rate;
+    public void setNightlyRate(double nightlyRate) {
+        this.nightlyRate = nightlyRate;
     }
 }
