@@ -65,5 +65,10 @@ public class HotelTest {
         assertEquals(0, hotel1.numberOfGuests());
     }
 
+    @Test
+    public void canListVacantRooms() {
+        ArrayList<Bedroom> results = hotel1.listVacancies();
+        assertEquals(1, results.size());
+    }
 }
 

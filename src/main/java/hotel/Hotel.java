@@ -76,4 +76,14 @@ public class Hotel {
         Bedroom room = findRoom(roomChoice);
         room.checkOut();
     }
+
+    public ArrayList<Bedroom> listVacancies(){
+        ArrayList<Bedroom> emptyRooms = new ArrayList<>();
+        for (Bedroom room : bedrooms){
+            if (room.getOccupants().size() == 0){
+                emptyRooms.add(room);
+            }
+        }
+        return emptyRooms;
+    }
 }
