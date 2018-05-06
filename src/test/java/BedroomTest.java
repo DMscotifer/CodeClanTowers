@@ -1,5 +1,5 @@
 import room.Bedroom;
-import room.BedroomType;
+import room.Type;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,7 +11,7 @@ public class BedroomTest {
 
     @Before
     public void before(){
-        bedroom1 = new Bedroom(1, BedroomType.DOUBLE, 80.00);
+        bedroom1 = new Bedroom(2, true, 1, Type.DOUBLE, 80);
     }
 
     @Test
@@ -21,7 +21,7 @@ public class BedroomTest {
 
     @Test
     public void hasBedroomType() {
-        assertEquals(BedroomType.DOUBLE, bedroom1.getType());
+        assertEquals(Type.DOUBLE, bedroom1.getType());
     }
 
     @Test

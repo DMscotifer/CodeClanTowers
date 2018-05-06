@@ -4,8 +4,8 @@ public class HireRoom extends Room {
 
     private String name;
 
-    public HireRoom(int capacity, String name) {
-        super(capacity);
+    public HireRoom(int capacity, boolean chargeable, String name) {
+        super(capacity, chargeable);
         this.name = name;
     }
 
