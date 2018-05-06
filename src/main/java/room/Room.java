@@ -39,4 +39,8 @@ public abstract class Room {
     public void setChargeable(boolean chargeable) {
         this.chargeable = chargeable;
     }
+
+    public ArrayList<Guest> putGuestInRoom(){
+        return this.occupants;
+    }
 }
